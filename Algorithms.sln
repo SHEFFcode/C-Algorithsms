@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms", "Algorithms\Algorithms.csproj", "{0247EF3C-E00A-4C12-B34E-82EDBA3E3352}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0247EF3C-E00A-4C12-B34E-82EDBA3E3352}.Debug|x86.ActiveCfg = Debug|x86
+		{0247EF3C-E00A-4C12-B34E-82EDBA3E3352}.Debug|x86.Build.0 = Debug|x86
+		{0247EF3C-E00A-4C12-B34E-82EDBA3E3352}.Release|x86.ActiveCfg = Release|x86
+		{0247EF3C-E00A-4C12-B34E-82EDBA3E3352}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
