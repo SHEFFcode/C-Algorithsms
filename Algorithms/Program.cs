@@ -8,23 +8,40 @@ namespace Algorithms
 	{
 		public static void Main(string[] args)
 		{
-			//collections
-
-			//1. Array - you must know it's size and type
-
-			string[] ArrayOfStrings = { "Jeremy", "James", "John" };
-
-			foreach (var element in ArrayOfStrings)
-			{
-				Console.WriteLine(element);
-			}
-
-			Console.WriteLine(ArrayOfStrings.FirstOrDefault());
-
-			//2. List - can be of different sizes, but of the same type
-			List <string> stringList = new List<string>();
+            var result = Sum(new int[] {1, 3, 2});
+            Console.WriteLine(result);
 
 
+            var fibresult = Fib(4);
+            Console.WriteLine(fibresult);
 		}
+
+		static int Sum(int[] array) 
+		{
+			int sum = 0;
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                sum = sum + array[i];
+            }
+
+            return sum;
+		}
+
+        static int Fib(int index) 
+        {
+
+            int first = 0;
+            int second = 1;
+
+            for (int i = 0; i < index; i++)
+            {
+                int temp = first;
+                first = second;
+                second = temp + first;
+            }
+
+            return first;
+        }
 	}
 }
