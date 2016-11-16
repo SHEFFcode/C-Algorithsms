@@ -42,7 +42,7 @@ namespace Algorithms
 
         public void PrintStack()
         {
-            for (int i = 0; i < items.Length; i++)
+            for (int i = 0; i < pointer; i++)
             {
                 Console.WriteLine(items[i]);
             }
