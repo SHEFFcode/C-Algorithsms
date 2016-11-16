@@ -46,6 +46,12 @@ namespace Algorithms
             intersectionResult.ForEach(x => Console.WriteLine($"{x} is on both lists."));
             //Console.WriteLine($"The number of cities on both lists is {intersectionResult.ToString()}");
 
+
+            //Here we want to return the union of both lists, such that no item is doubled up.
+
+            var unionResult = Sets.Union(coolCities, westCoastCities);
+            unionResult.ForEach(x => Console.WriteLine($"{x}"));
+
 		}
 
         static bool HasValueGreaterThenTen(int[] arr)

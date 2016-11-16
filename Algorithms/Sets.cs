@@ -24,6 +24,27 @@ namespace Algorithms
             return intersectionList;
         }
 
+        public static List<string> Union(List<string> a, List<string> b)
+        {
+
+            List<string> result = new List<string>();
+
+            result = a;
+
+            foreach (var item in b)
+            {
+                if (!Contains(a, item))
+                {
+                    result.Add(item);
+                }
+            }
+
+
+
+
+            return result;
+        }
+
         private static bool Contains(List<string> array, string key)
         {
 
