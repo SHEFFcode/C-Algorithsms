@@ -43,7 +43,8 @@ namespace Algorithms
             List<string> coolCities = new List<string>() { "San Francisco", "Seattle", "Boston", "Chicago", "New York City" };
 
             var intersectionResult = Sets.Intersection(westCoastCities, coolCities);
-            Console.WriteLine($"The number of cities on both lists is {intersectionResult}");
+            intersectionResult.ForEach(x => Console.WriteLine($"{x} is on both lists."));
+            //Console.WriteLine($"The number of cities on both lists is {intersectionResult.ToString()}");
 
 		}
 
