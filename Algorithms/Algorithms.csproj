@@ -37,6 +37,7 @@
     <Compile Include="LinearSearch.cs" />
     <Compile Include="BinarySearch.cs" />
     <Compile Include="Counting.cs" />
+    <Compile Include="Sets.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

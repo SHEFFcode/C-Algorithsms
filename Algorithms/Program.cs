@@ -37,6 +37,14 @@ namespace Algorithms
             int maxNumber = Counting.FindMax(arrayOfIntegers);
             Console.WriteLine($"the maximum value of this collection is {maxNumber}");
 
+
+            //Find an a common object in two collections.
+            List<string> westCoastCities = new List<string>() { "San Francisco", "San Jose", "Oakland", "Los Angeles", "San Diego", "Portland", "Seattle" };
+            List<string> coolCities = new List<string>() { "San Francisco", "Seattle", "Boston", "Chicago", "New York City" };
+
+            var intersectionResult = Sets.Intersection(westCoastCities, coolCities);
+            Console.WriteLine($"The number of cities on both lists is {intersectionResult}");
+
 		}
 
         static bool HasValueGreaterThenTen(int[] arr)
