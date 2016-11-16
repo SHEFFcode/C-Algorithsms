@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{0247EF3C-E00A-4C12-B34E-82EDBA3E3352}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Algorithms/BinarySearch.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Algorithms/Counting.cs">
     <Files>
-      <File FileName="Algorithms/Program.cs" Line="4" Column="1" />
+      <File FileName="Algorithms/Program.cs" Line="30" Column="69" />
       <File FileName="Algorithms/LinearSearch.cs" Line="4" Column="37" />
-      <File FileName="Algorithms/BinarySearch.cs" Line="6" Column="9" />
+      <File FileName="Algorithms/BinarySearch.cs" Line="7" Column="33" />
+      <File FileName="Algorithms/Counting.cs" Line="6" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Algorithms PreferredExecutionTarget="MonoDevelop.Default" />

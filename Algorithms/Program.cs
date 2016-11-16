@@ -30,6 +30,13 @@ namespace Algorithms
             int binaryRes = BinarySearch.Search(arrayOfIntegers, 3);
             Console.WriteLine($"binary search result = {binaryRes}");
 
+            int numbersAbove = Counting.CountIfAbove(collection: arrayOfIntegers, key: 5);
+            Console.WriteLine($"numbers above 5 are {numbersAbove}");
+
+
+            int maxNumber = Counting.FindMax(arrayOfIntegers);
+            Console.WriteLine($"the maximum value of this collection is {maxNumber}");
+
 		}
 
         static bool HasValueGreaterThenTen(int[] arr)
