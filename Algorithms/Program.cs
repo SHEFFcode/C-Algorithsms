@@ -52,6 +52,24 @@ namespace Algorithms
             var unionResult = Sets.Union(coolCities, westCoastCities);
             unionResult.ForEach(x => Console.WriteLine($"{x}"));
 
+
+            //create a stack
+
+            Stack<int> stack = new Stack<int>(5);
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+
+            stack.PrintStack();
+
+            stack.Pop();
+
+            stack.PrintStack();
+
+            Console.ReadLine();
+
+
+
 		}
 
         static bool HasValueGreaterThenTen(int[] arr)
