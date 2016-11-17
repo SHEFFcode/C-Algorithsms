@@ -66,6 +66,20 @@ namespace Algorithms
 
             stack.PrintStack();
 
+            //create a linked list of integers
+
+            LinkedList<int> integerLinkedList = new LinkedList<int>(5);
+            integerLinkedList.Add(1);
+            integerLinkedList.Add(2);
+            integerLinkedList.Add(3);
+            integerLinkedList.Add(4);
+            integerLinkedList.Add(5);
+
+            integerLinkedList.PrintList();
+
+            integerLinkedList.Contains(3);
+
+
             Console.ReadLine();
 
 

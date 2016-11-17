@@ -39,6 +39,8 @@
     <Compile Include="Counting.cs" />
     <Compile Include="Sets.cs" />
     <Compile Include="Stack.cs" />
+    <Compile Include="LinkedList.cs" />
+    <Compile Include="ListItem.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

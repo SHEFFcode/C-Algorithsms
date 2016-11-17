@@ -1,12 +1,14 @@
 ﻿<Properties StartupConfiguration="{0247EF3C-E00A-4C12-B34E-82EDBA3E3352}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Algorithms/Stack.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Algorithms/ListItem.cs">
     <Files>
-      <File FileName="Algorithms/Program.cs" Line="63" Column="13" />
+      <File FileName="Algorithms/Program.cs" Line="67" Column="32" />
       <File FileName="Algorithms/LinearSearch.cs" Line="4" Column="37" />
       <File FileName="Algorithms/BinarySearch.cs" Line="7" Column="33" />
       <File FileName="Algorithms/Counting.cs" Line="22" Column="51" />
       <File FileName="Algorithms/Sets.cs" Line="45" Column="26" />
-      <File FileName="Algorithms/Stack.cs" Line="5" Column="40" />
+      <File FileName="Algorithms/Stack.cs" Line="45" Column="40" />
+      <File FileName="Algorithms/LinkedList.cs" Line="4" Column="1" />
+      <File FileName="Algorithms/ListItem.cs" Line="4" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Algorithms PreferredExecutionTarget="MonoDevelop.Default" />
