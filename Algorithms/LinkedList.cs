@@ -53,6 +53,40 @@ namespace Algorithms
             return false;
         }
 
+        public bool TryDelete(T item)
+        {
+            if (Contains(item))
+            {
+                if (First.Value.Equals(item))
+                {
+                    First = First.Next;
+                }
+                else 
+                {
+                    ListItem<T> current = First;
+                    while (current.Value != null)
+                    {
+                        if (current.Next.Value.Equals(item))
+                        {
+                            current.Next = current.Next.Next;
+                            break;
+                        }
+                        else 
+                        {
+                            current = current.Next;
+                        }
+
+
+                    }
+                }
+                Console.WriteLine($"Deleted Linked List item {item}");
+                return true;
+            }
+            Console.WriteLine($"Could not find Linked List Item {item}");
+            return false;
+
+        }
+
         public void PrintList() 
         {
             ListItem<T> current = First;

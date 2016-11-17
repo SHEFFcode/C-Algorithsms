@@ -79,6 +79,10 @@ namespace Algorithms
 
             integerLinkedList.Contains(3);
 
+            integerLinkedList.TryDelete(3);
+
+            integerLinkedList.PrintList();
+
 
             Console.ReadLine();
 
