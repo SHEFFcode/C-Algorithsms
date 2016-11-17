@@ -38,13 +38,15 @@ namespace Algorithms
             ListItem<T> current = First;
             while (current != null)
             {
-                current = current.Next;
+                
 
                 if (current.Value.Equals(value))
                 {
                     Console.WriteLine($"Linked List Contains {value}");
                     return true;
                 }
+
+                current = current.Next;
             }
 
             Console.WriteLine($"Linked List does not contain {value}");
