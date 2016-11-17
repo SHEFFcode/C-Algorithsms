@@ -81,7 +81,10 @@ namespace Algorithms
 
             integerLinkedList.TryDelete(3);
 
-            integerLinkedList.PrintList();
+            foreach (var item in integerLinkedList)
+            {
+                Console.WriteLine($"Item {item} is in the linked list");
+            }
 
 
             Console.ReadLine();

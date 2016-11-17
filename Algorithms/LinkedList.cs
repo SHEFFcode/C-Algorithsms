@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 namespace Algorithms
 {
-    public class LinkedList<T>
+    public class LinkedList<T> : IEnumerable<T>
     {
         private ListItem<T> First { get; set; }
         public int Length = 0;
@@ -86,6 +87,23 @@ namespace Algorithms
             return false;
 
         }
+
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            ListItem<T> current = First;
+            while (current != null)
+            {
+                yield return current.Value;
+                current = current.Next;
+            }
+        }
+
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator();
+        }
+
 
         public void PrintList() 
         {
