@@ -87,6 +87,21 @@ namespace Algorithms
             }
 
 
+            //Binary tree
+            BinaryTree<int> myBinaryTree = new BinaryTree<int>(10);
+            myBinaryTree.Add(5);
+            myBinaryTree.Add(15);
+            myBinaryTree.Add(2);
+            myBinaryTree.Add(6);
+            myBinaryTree.Add(14);
+            myBinaryTree.Add(16);
+            myBinaryTree.Add(1);
+            myBinaryTree.Add(3);
+
+            Console.WriteLine($"My Binary Search Tree Search for 16 returns {myBinaryTree.Search(16)}");
+            Console.WriteLine($"My Binary Search Tree Search for 17 returns {myBinaryTree.Search(17)}");
+
+
             Console.ReadLine();
 
 
