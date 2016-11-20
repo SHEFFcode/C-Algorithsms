@@ -102,5 +102,67 @@ namespace Algorithms
                 return false;
             }
         }
+
+        public BinaryTree<T> FindMinimumValue(BinaryTree<T> tree)
+        {
+            BinaryTree<T> current = tree;
+            while (current.Right != null)
+            {
+                current = current.Right;
+            }
+
+            return current;
+        }
+
+        public BinaryTree<T> FindMaximumValue(BinaryTree<T> tree)
+        {
+            BinaryTree<T> current = tree;
+            while (current.Left != null)
+            {
+                current = current.Left;
+            }
+
+            return current;
+        }
+
+        public BinaryTree<T> FindSuccessor(BinaryTree<T> tree)
+        {
+            if (tree.Right != null)
+            {
+                return FindMinimumValue(tree);
+            }
+            else 
+            {
+                BinaryTree<T> hub = tree;
+                BinaryTree<T> current = this;
+
+                List<KeyValuePair<BinaryTree<T>, bool>> nodes = new List<KeyValuePair<BinaryTree<T>, bool>>();
+
+                while (!current.Value.Equals(tree.Value))
+                {
+                    if (current.Value.CompareTo(tree.Value) < 0)
+                    {
+                        current = current.Right;
+                        nodes.Add(new KeyValuePair<BinaryTree<T>, bool>(current, false));
+                    }
+                    else if (current.Value.CompareTo(tree.Value) > 0)
+                    {
+                        current = current.Left;
+                        nodes.Add(new KeyValuePair<BinaryTree<T>, bool>(current, true));
+                    }
+                }
+
+                var tempArray = nodes.ToArray();
+                for (int i = tempArray.Length; i >= 0; i--)
+                {
+                    if (tempArray[i].Value == true)
+                    {
+                        hub = tempArray[i].Key ;
+                    }
+                }
+
+                return hub;
+            }
+        }
     }
 }
