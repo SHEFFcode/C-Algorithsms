@@ -30,7 +30,24 @@ namespace Algorithms
 
         public IEnumerator<T> GetEnumerator()
         {
-            throw new NotImplementedException();
+            if (Left != null)
+            {
+                foreach (var item in Left)
+                {
+                    yield return item;
+                }
+            }
+
+            yield return this.Value;
+
+            if (Right != null)
+            {
+                foreach (var item in Right)
+                {
+                    yield return item;
+                }
+            }
+
         }
 
         IEnumerator IEnumerable.GetEnumerator()
@@ -163,6 +180,106 @@ namespace Algorithms
 
                 return hub;
             }
+        }
+
+        public bool Delete(T value)
+        {
+            return DeleteFromNode(this, value);
+        }
+         
+        private bool DeleteFromNode(BinaryTree<T> tree, T value)
+        {
+            //indicates if a situation occrs where this child is the next node and it has no children
+            if (tree.Right != null && tree.Right.Value.Equals(value) && tree.Right.Right == null && tree.Right.Left == null)
+            {
+                tree.Right = null;
+                return true;
+            }
+            else if (tree.Left != null && tree.Left.Value.Equals(value) && tree.Left.Left == null && tree.Left.Right == null)
+            {
+                tree.Left = null;
+                return true;
+            }
+            //the node to delete has children on the right
+            else if (tree.Right.Value.Equals(value) && tree.Right.Right != null && tree.Right.Left != null)
+            {
+                BinaryTree<T> successor = FindSuccessor(tree);
+                BinaryTree<T> temp = successor;
+
+                tree.Right.Value = temp.Value;
+                successor.Value = value;
+                DeleteFromNode(this, value);
+
+                return true;
+            }
+            //the node to delete has children on the left
+            else if (tree.Left.Value.Equals(value) && tree.Left.Right != null && tree.Left.Left != null)
+            {
+                BinaryTree<T> successor = FindSuccessor(tree);
+                BinaryTree<T> temp = successor;
+
+                tree.Left.Value = temp.Value;
+                successor.Value = value;
+                DeleteFromNode(this, value);
+
+                return true;
+            }
+            //the next value is to be deleted, and it has only one child on the right
+            else if (tree.Right.Value.Equals(value) && tree.Right.Right != null || tree.Right.Left != null)
+            {
+                BinaryTree<T> temp;
+                if (tree.Right.Left != null)
+                {
+                    temp = tree.Right.Left;
+                }
+                else 
+                {
+                    temp = tree.Right.Right;
+                }
+
+                tree.Right = null;
+                foreach (var item in temp)
+                {
+                    Add(item);
+                }
+
+                return true;
+            }
+
+            //the next value is to be deleted, and it has only one child on the left
+            else if (tree.Left.Value.Equals(value) && tree.Left.Right != null || tree.Left.Left != null)
+            {
+                BinaryTree<T> temp;
+                if (tree.Left.Left != null)
+                {
+                    temp = tree.Left.Left;
+                }
+                else
+                {
+                    temp = tree.Left.Right;
+                }
+
+                tree.Left = null;
+                foreach (var item in temp)
+                {
+                    Add(item);
+                }
+
+                return true;
+            }
+
+            if (tree.Value.CompareTo(value) < 0)
+            {
+                return DeleteFromNode(this.Right, value);
+            }
+
+
+            if (tree.Value.CompareTo(value) < 0)
+            {
+                return DeleteFromNode(this.Left, value);
+            }
+
+            return false;
         }
     }
 }

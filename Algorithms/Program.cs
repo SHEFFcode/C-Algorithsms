@@ -101,6 +101,15 @@ namespace Algorithms
             Console.WriteLine($"My Binary Search Tree Search for 16 returns {myBinaryTree.Search(16)}");
             Console.WriteLine($"My Binary Search Tree Search for 17 returns {myBinaryTree.Search(17)}");
 
+            myBinaryTree.Delete(1);
+            myBinaryTree.Delete(15);
+
+
+            foreach (var item in myBinaryTree)
+            {
+                Console.WriteLine($"{item} ->");
+            }
+
 
             Console.ReadLine();
 
